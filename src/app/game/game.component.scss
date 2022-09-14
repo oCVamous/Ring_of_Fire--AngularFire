@@ -1,0 +1,61 @@
+.field {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    background-image: url(../../assets/wood-g91175600d_1920.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-stack {
+    position: relative;
+    img {
+        position: absolute;
+        width: 120px;
+    }
+}
+
+.played-card {
+    transform: scale(1.3) translateX(140px) translateY(-180px) rotate(-11deg);
+}
+
+.pick-card {
+    animation: pick-card-animation 1s ease-in-out;
+    // transition: all 125s ease-in-out;
+    // transform: pick-card-animation 2s ease-in-out;
+    transform: scale(1.3) translateX(140px) translateY(-180px) rotate(-11deg);
+}
+
+@keyframes pick-card-animation {
+    0% {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(1.7);
+    }
+    60% {
+        transform: scale(1.7);
+    }
+    100% {
+        transform: scale(1.3) translateX(140px) translateY(-180px) rotate(-11deg);
+    }
+}
+
+.player-position {
+    position: absolute;
+    right: 0;
+}
+
+.btn-add {
+    position: absolute;
+    right: 32px;
+    bottom: 32px;
+}
+
+.pin-bottom {
+    position: absolute;
+    bottom: 32px;
+    left: 100px;
+    right: 100px;
+}

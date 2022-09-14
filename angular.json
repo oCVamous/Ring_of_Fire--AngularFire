@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -96,12 +97,26 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "ringoffire:build:production",
+            "firebaseProject": "ps-ring-of-fire",
+            "firebaseHostingSite": "ps-ring-of-fire"
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "9b738d98-6845-4fa7-8bb4-02fcbaf7068a"
   }
 }

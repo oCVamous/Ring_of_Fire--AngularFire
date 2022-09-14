@@ -3,6 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  firebase: {
+    apiKey: "AIzaSyDTEd-bYrQhXXwTCEgpv-5USwlwxjbqWzk",
+    authDomain: "ps-ring-of-fire.firebaseapp.com",
+    projectId: "ps-ring-of-fire",
+    storageBucket: "ps-ring-of-fire.appspot.com",
+    messagingSenderId: "34795334102",
+    appId: "1:34795334102:web:8f3938d6dafa0a40d9dc77"
+  },
   production: false
 };
 
