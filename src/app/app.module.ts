@@ -25,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { PlayerMobileComponent } from './player-mobile/player-mobile.component';
 
 
 
@@ -36,6 +37,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     PlayerComponent,
     DialogAddPlayerComponent,
     GameInfoComponent,
+    PlayerMobileComponent,
   ],
   imports: [
     BrowserModule,
