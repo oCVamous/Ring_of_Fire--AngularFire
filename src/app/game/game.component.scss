@@ -108,3 +108,13 @@ app-player, app-player-mobile {
     width: 0px;
     z-index: -9999999;
 }
+
+.qr-code {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 10px;
+    left: 10px;
+
+}

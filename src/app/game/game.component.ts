@@ -10,6 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 import { doc, onSnapshot} from 'firebase/firestore';
 import firebase from 'firebase/compat';
 import app = firebase.app;
+import { DialogQRCodeComponent } from '../dialog-qr-code/dialog-qr-code.component';
 
 
 @Component({
@@ -38,6 +39,10 @@ export class GameComponent implements OnInit {
 
         // let db = getFirestore(app);
 
+    }
+
+    openQR_Code(): void {
+        const dialogRef = this.dialog.open(DialogQRCodeComponent);
     }
 
     openDialog(): void {

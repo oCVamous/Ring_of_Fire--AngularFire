@@ -5,6 +5,8 @@
  [name]="player"
  class="player-position hide-mobile"></app-player>
 
+
+
  <!-- [ngStyle]="{'left.px': 10 + (i * 65), 'top.px':0}" -->
  <div class="scroll-container hide-desktop" >
     <app-player-mobile *ngFor="let player of game.players; let i = index" (click)="editPlayer(i)" 
@@ -13,6 +15,13 @@
         [name]="player"
         ></app-player-mobile>
  </div>
+
+<button mat-fab color="primary" class="qr-code">
+    <mat-icon (click)="openQR_Code()">qr_code</mat-icon>
+</button>
+
+
+
  
 <div *ngIf="gameOver" class="gameOver">
     <img src="/assets/game-over-2720584__340.png" alt="">

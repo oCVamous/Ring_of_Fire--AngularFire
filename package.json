@@ -21,6 +21,8 @@
     "@angular/platform-browser": "^14.0.0",
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
+    "angular2-qrcode": "^2.0.3",
+    "angularx-qrcode": "^14.0.0",
     "firebase": "^9.9.4",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
