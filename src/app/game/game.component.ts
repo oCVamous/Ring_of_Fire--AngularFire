@@ -47,6 +47,7 @@ export class GameComponent implements OnInit {
             if (name && name.length > 0) {
                 
                 this.game.players.push(name);
+                this.game.player_images.push('user (1).png');
                 this.saveGame();
                 // this.route.params.subscribe(async (params) => {
 
@@ -109,6 +110,7 @@ export class GameComponent implements OnInit {
                     this.game.currentPlayer = game.currentPlayer;
                     this.game.playedCards = game.playedCards;
                     this.game.players = game.players;
+                    this.game.player_images = game.player_images;
                     this.game.stack = game.stack;
                     this.game.pickCardAnimation = game.pickCardAnimation;
                     this.game.currentCard = game.currentCard;
@@ -151,14 +153,24 @@ export class GameComponent implements OnInit {
 
         const dialogRef = this.dialog.open(EditPlayerComponent);
 
-        dialogRef.afterClosed().subscribe((change: string) => { }
+        dialogRef.afterClosed().subscribe((change: string) => {
+            console.log('Received change', change);
+            if (change) {
+                if (change == 'DELETE') {
+                    this.game.players.splice(playerID, 1);
+                    this.game.player_images.splice(playerID, 1);
+                } else {
+                    this.game.player_images[playerID] = change;
+            }
+            this.saveGame();
+        }
             // if (name && name.length > 0) {
                 
             //     this.game.players.push(name);
             //     this.saveGame();
             // }
-        )}
-
+        });
+    }
 
     async saveGame() {
         await this
