@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { QRCodeModule } from 'angularx-qrcode'; //Ok i dont know why its not running
-// hmm everything is ok but i dont understand why ist is not removiung error
+import { QRCodeModule } from 'angularx-qrcode'; 
 
 @Component({
   selector: 'app-dialog-qr-code',
