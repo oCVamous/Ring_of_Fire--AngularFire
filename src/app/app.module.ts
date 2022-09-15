@@ -26,6 +26,7 @@ import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { PlayerMobileComponent } from './player-mobile/player-mobile.component';
+import { EditPlayerComponent } from './edit-player/edit-player.component';
 
 
 
@@ -38,6 +39,7 @@ import { PlayerMobileComponent } from './player-mobile/player-mobile.component';
     DialogAddPlayerComponent,
     GameInfoComponent,
     PlayerMobileComponent,
+    EditPlayerComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,12 +1,13 @@
-import {Component, OnInit} from '@angular/core';
-import {Game} from '../../models/game';
-import {DialogAddPlayerComponent} from '../dialog-add-player/dialog-add-player.component';
-import {MatDialog, MatDialogRef} from '@angular/material/dialog';
-import {AngularFirestore} from '@angular/fire/compat/firestore';
-import {collection, getFirestore, setDoc} from '@angular/fire/firestore';
-import {Observable} from 'rxjs';
-import {ActivatedRoute} from '@angular/router';
-import {doc, onSnapshot} from 'firebase/firestore';
+import { Component, OnInit } from '@angular/core';
+import { Game } from '../../models/game';
+import { DialogAddPlayerComponent } from '../dialog-add-player/dialog-add-player.component';
+import { EditPlayerComponent } from '../edit-player/edit-player.component';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { collection, getFirestore, setDoc } from '@angular/fire/firestore';
+import  {Observable } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
+import { doc, onSnapshot} from 'firebase/firestore';
 import firebase from 'firebase/compat';
 import app = firebase.app;
 
@@ -143,7 +144,21 @@ export class GameComponent implements OnInit {
             this.saveGame();
           }, 1000);
         }
-      }
+    }
+
+    editPlayer(playerID: number) {
+        console.log('Edit Player', playerID);
+
+        const dialogRef = this.dialog.open(EditPlayerComponent);
+
+        dialogRef.afterClosed().subscribe((change: string) => { }
+            // if (name && name.length > 0) {
+                
+            //     this.game.players.push(name);
+            //     this.saveGame();
+            // }
+        )}
+
 
     async saveGame() {
         await this
