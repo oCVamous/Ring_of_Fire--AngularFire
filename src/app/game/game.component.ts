@@ -17,6 +17,7 @@ import app = firebase.app;
     styleUrls: ['./game.component.scss']
 })
 export class GameComponent implements OnInit {
+    gameOver = false;
     pickCardAnimation = false;
     currentCard: string = '';
     game!: Game;
@@ -125,29 +126,26 @@ export class GameComponent implements OnInit {
         // console.log(gameInformation);
 
     }
-
     takeCard() {
-        if (!this.pickCardAnimation) {
-            this.game.currentCard = this.game.stack.pop();
-            this.game.pickCardAnimation = true;
-
-            console.log('New Card ', this.currentCard);
-            console.log('Game is ', this.game);
-
-            //Nächster Spieler
-            this.game.currentPlayer++;
-            this.game.currentPlayer = this.game.currentPlayer % this.game.players.length;
+        if(this.game.stack.length == 0) {
+          this.gameOver = true;
+        } else if (!this.game.pickCardAnimation) {
+          this.game.currentCard = this.game.stack.pop();
+          this.game.pickCardAnimation = true;
+          console.log('New card: ' + this.game.currentCard);
+          console.log('Game is', this.game);
+          this.game.currentPlayer++;
+          this.game.currentPlayer = this.game.currentPlayer % this.game.players.length;
+    
+          this.saveGame();
+    
+          setTimeout(() => {
+            this.game.playedCards.push(this.game.currentCard);
+            this.game.pickCardAnimation = false;
             this.saveGame();
-
-            setTimeout(() => {
-                this.game.playedCards.push(this.currentCard);
-                this.pickCardAnimation = false;
-                this.saveGame();
-            }, 1000);
+          }, 1000);
         }
-
-
-    }
+      }
 
     async saveGame() {
         await this

@@ -13,6 +13,10 @@ body {
     align-items: center;
     background-image: url(../../assets/start-screen.jpg);
 
+    @media (max-width: 960px) {
+        width: 400px;
+    }
+
 }
 
 .start-label-box {
