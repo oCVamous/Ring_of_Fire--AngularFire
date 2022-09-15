@@ -118,3 +118,10 @@ app-player, app-player-mobile {
     left: 10px;
 
 }
+
+.btn-add {
+    @media (max-width: 720px) {
+        bottom: 12px;
+        right: 12px;
+    }
+}
