@@ -27,6 +27,10 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { PlayerMobileComponent } from './player-mobile/player-mobile.component';
 import { EditPlayerComponent } from './edit-player/edit-player.component';
+import { QRCodeComponent } from 'angularx-qrcode';
+import { DialogQRCodeComponent } from './dialog-qr-code/dialog-qr-code.component';
+// import { MatIconModule } from '@angular/material/icon';
+
 
 
 
@@ -40,6 +44,9 @@ import { EditPlayerComponent } from './edit-player/edit-player.component';
     GameInfoComponent,
     PlayerMobileComponent,
     EditPlayerComponent,
+    DialogQRCodeComponent,
+    // MatIconModule,
+    // QRCodeComponent,
   ],
   imports: [
     BrowserModule,
