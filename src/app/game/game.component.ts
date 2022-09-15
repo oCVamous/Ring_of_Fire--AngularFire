@@ -43,6 +43,8 @@ export class GameComponent implements OnInit {
 
     openQR_Code(): void {
         const dialogRef = this.dialog.open(DialogQRCodeComponent);
+        dialogRef.componentInstance.id=this.gameId
+
     }
 
     openDialog(): void {

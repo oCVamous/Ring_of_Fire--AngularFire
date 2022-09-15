@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -27,10 +27,10 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { PlayerMobileComponent } from './player-mobile/player-mobile.component';
 import { EditPlayerComponent } from './edit-player/edit-player.component';
-import { QRCodeComponent } from 'angularx-qrcode';
+// import { QRCodeComponent } from 'angularx-qrcode';
+import { QRCodeModule } from 'angularx-qrcode';
+// import { QrCodeComponent } from './qr-code.component';
 import { DialogQRCodeComponent } from './dialog-qr-code/dialog-qr-code.component';
-// import { MatIconModule } from '@angular/material/icon';
-
 
 
 
@@ -45,6 +45,8 @@ import { DialogQRCodeComponent } from './dialog-qr-code/dialog-qr-code.component
     PlayerMobileComponent,
     EditPlayerComponent,
     DialogQRCodeComponent,
+    
+    // QrCodeComponent
     // MatIconModule,
     // QRCodeComponent,
   ],
@@ -61,12 +63,16 @@ import { DialogQRCodeComponent } from './dialog-qr-code/dialog-qr-code.component
     MatCardModule,
     HttpClientModule,
     FirestoreModule,
+    QRCodeModule,
+    // QRCodeComponent,
+    // QRCodeModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     // provideFirebaseApp(() => initializeApp(environment.firebase)),
 
     // provideFirestore(() => getFirestore())
   ],
+  schemas: [ NO_ERRORS_SCHEMA ],
   providers: [],
   bootstrap: [AppComponent]
 })
