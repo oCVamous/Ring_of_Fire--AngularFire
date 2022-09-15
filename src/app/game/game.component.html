@@ -12,10 +12,10 @@
          src="/assets/cards/card_cover.png" alt="">
         
         <!-- Stack for playedCards -->
-        <img *ngFor="let card of game?.playedCards" class="played-card" src="/assets/cards/{{ card }}.png" style="right: 25px;">
+        <img *ngFor="let card of game.playedCards" class="played-card" src="/assets/cards/{{ card }}.png" style="right: 25px;">
 
         <!-- Current Card Animation -->
-        <img (click)="takeCard()" *ngIf="game.pickCardAnimation"  class="top-card pick-card" style="right: 25px;"
+        <img (click)="takeCard()" *ngIf="game.pickCardAnimation"  class="pick-card" style="right: 25px;"
          src="/assets/cards/{{ game.currentCard }}.png" alt=""> 
     </div>
 </div>
