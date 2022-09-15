@@ -1,6 +1,7 @@
 # Ringoffire
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.
+Test and play it online: https://ps-ring-of-fire.web.app/game/zhi0EfUk1oBDgRN0nji6
 
 ## Development server
 
