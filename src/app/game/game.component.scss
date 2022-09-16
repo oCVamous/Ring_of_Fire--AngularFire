@@ -121,6 +121,7 @@ app-player, app-player-mobile {
 
 .btn-add {
     @media (max-width: 720px) {
+        position: fixed;
         bottom: 12px;
         right: 12px;
     }
