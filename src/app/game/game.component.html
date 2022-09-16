@@ -5,8 +5,6 @@
  [name]="player"
  class="player-position hide-mobile"></app-player>
 
-
-
  <!-- [ngStyle]="{'left.px': 10 + (i * 65), 'top.px':0}" -->
  <div class="scroll-container hide-desktop" >
     <app-player-mobile *ngFor="let player of game.players; let i = index" (click)="editPlayer(i)" 
