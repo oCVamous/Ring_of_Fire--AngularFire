@@ -7,19 +7,19 @@ import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/cor
 })
 export class GameInfoComponent implements OnInit, OnChanges {
   cardAction = [
-    { title: 'Waterfall', description: 'Everyone has to start drinking at the same time. As soon as player 1 stops drinking, player 2 may stop drinking. Player 3 may stop as soon as player 2 stops drinking, and so on.' },
-    { title: 'You', description: 'You decide who drinks' },
-    { title: 'Me', description: 'Congrats! Drink a shot!' },
-    { title: 'Category', description: 'Come up with a category (e.g. Colors). Each player must enumerate one item from the category.' },
-    { title: 'Bust a jive', description: 'Player 1 makes a dance move. Player 2 repeats the dance move and adds a second one. ' },
-    { title: 'Chicks', description: 'All girls drink.' },
-    { title: 'Heaven', description: 'Put your hands up! The last player drinks!' },
-    { title: 'Mate', description: 'Pick a mate. Your mate must always drink when you drink and the other way around.' },
-    { title: 'Thumbmaster', description: '' },
-    { title: 'Men', description: 'All men drink.' },
-    { title: 'Quizmaster', description: '' },
-    { title: 'Never have i ever...', description: 'Say something you nnever did. Everyone who did it has to drink.' },
-    { title: 'Rule', description: 'Make a rule. Everyone needs to drink when he breaks the rule.' },
+    { title: 'Wasserfall', description: 'Alle trinken gleichzeitig.Sobald Player1 mit dem trinken aufhört, darf Player 2 aufhören. Player 3 darf erst aufhören, wenn Player 2 fertig ist uns so weiter...' },
+    { title: 'Du', description: 'Wähle jemanden aus, der trinken muss' },
+    { title: 'Ich', description: 'Glückwunsch, trink einen shot' },
+    { title: 'Sükrü', description: 'Sükrü muss trinken' },
+    { title: 'Verteile', description: 'Verteile 10 Schlücke oder trinke Sie selber' },
+    { title: 'Frauen', description: 'Alle Frauen müssen trinken' },
+    { title: 'Himmel', description: 'Hände in die Luft!!! Der letzte muss trinken' },
+    { title: 'Buddy', description: 'Wähle einen Buddy aus, wenn du trinkst muss er auch trinken und anders herum' },
+    { title: 'Toilette', description: 'Der letzte der auf dem WC war muss trinken' },
+    { title: 'Männer', description: 'Alle Männer müssen trinken' },
+    { title: 'Exen', description: 'Du oder jemand anderes muss sein Glas exen' },
+    { title: 'Gewählte', description: 'Alle Gewählten müssen trinken' },
+    { title: 'Regel', description: 'Mach eine Regel, jedesmal wenn Sie gebrochen wird muss die Person trinken' },
   ];
 
   title: string ='';
