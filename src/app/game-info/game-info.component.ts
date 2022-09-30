@@ -9,7 +9,7 @@ export class GameInfoComponent implements OnInit, OnChanges {
   cardAction = [
     { title: 'Wasserfall', description: 'Alle trinken gleichzeitig.Sobald Player1 mit dem trinken aufhört, darf Player 2 aufhören. Player 3 darf erst aufhören, wenn Player 2 fertig ist uns so weiter...' },
     { title: 'Du', description: 'Wähle jemanden aus, der trinken muss' },
-    { title: 'Ich', description: 'Glückwunsch, trink einen shot' },
+    { title: 'Shot', description: 'Glückwunsch, trink einen shot' },
     { title: 'Sükrü', description: 'Sükrü muss trinken' },
     { title: 'Verteile', description: 'Verteile 10 Schlücke oder trinke Sie selber' },
     { title: 'Frauen', description: 'Alle Frauen müssen trinken' },
