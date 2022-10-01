@@ -1,4 +1,10 @@
 export class Game {
+    avatars: any;
+    dealedCards: any;
+    dealingCards: any;
+    startNewGame() {
+        throw new Error('Method not implemented.');
+    }
     public players: string[] = [];
     public player_images: string[] = [];
     public stack: any[] = [];
@@ -8,12 +14,13 @@ export class Game {
     public pickCardAnimation = false;
     public currentCard: string = '';
     public gameId: string | undefined;
+    randomNumber: any;
 
 
 
     constructor() {
         for (let i = 1; i < 14; i++) {
-            this.stack.push('ace_' + i)
+            this.stack.push('spade_' + i)
             this.stack.push('hearts_' + i)
             this.stack.push('diamonds_' + i)
             this.stack.push('clubs_' + i)
