@@ -21,6 +21,8 @@ export class GameComponent implements OnInit {
     currentCard: string = '';
     game!: Game;
     gameId!: string;
+
+
     // games$: Observable<any[]> | undefined;
     // games: Array<any> | undefined;
     // coll: any;
@@ -100,6 +102,7 @@ export class GameComponent implements OnInit {
 
     ngOnInit(): void {
         this.newGame();
+        this.startDealingCards();
         this.route.params.subscribe((params) => {
             console.log(params['id']);
             this.gameId = params['id'];
@@ -119,10 +122,13 @@ export class GameComponent implements OnInit {
                     this.game.pickCardAnimation = game.pickCardAnimation;
                     this.game.currentCard = game.currentCard;
                 });
-
         });
-
     }
+
+    startDealingCards() {
+
+  }
+    
 
     async newGame() {
         this.game = new Game();
